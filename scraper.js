@@ -85,9 +85,14 @@ async function runScrapWithProxy(
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
             '--single-process',
-            proxies.length === 0
-              ? ''
-              : `--proxy-server=${proxies[i].IP}:${proxies[i].PORT}`
+            // proxies.length === 0
+            //   ? ''
+            //   : `--proxy-server=${proxies[i].IP}:${proxies[i].PORT}`
+            method.method === 'custom'
+              ? `--proxy-server=${proxies[i].IP}:${proxies[i].PORT}`
+              : method.method === 'premium'
+              ? `--proxy-server=34.201.233.141:31112`
+              : ''
           ],
           ignoreDefaultArgs: ['--disable-extensions'],
           ignoreHTTPSErrors: true
