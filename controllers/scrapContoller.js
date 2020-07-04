@@ -1,10 +1,11 @@
-const runScrapWithProxy = require('../scraper');
+const PremiumProx = require('../methodes/PremiumProx');
+const CustomProx = require('../methodes/CustomProx');
 const scrapMod = require('./../models/scrapModel');
 const errorsMod = require('./../models/errorsModel');
 const bandwidthFun = require('./../bandwidth');
 // ! Scrap with Proxy
 
-const runProxyScrap = async (req, res) => {
+const runCustomProx = async (req, res) => {
   keyword = req.body.keyword;
   website = req.body.website;
   proxies = req.body.proxies;
@@ -23,7 +24,7 @@ const runProxyScrap = async (req, res) => {
       proxy: req.body.proxies,
       message: 'The process is starting...'
     });
-    await runScrapWithProxy(keyword, website, req.body.proxies, 1, whatMethod);
+    await CustomProx(keyword, website, req.body.proxies);
   }
 };
 
@@ -33,6 +34,7 @@ const runPremiumProxyScrap = async (req, res) => {
   keyword = req.body.keyword;
   website = req.body.website;
   numproxies = req.body.numproxies;
+  country = req.body.lang;
   whatMethod = {
     method: 'premium'
   };
@@ -49,7 +51,7 @@ const runPremiumProxyScrap = async (req, res) => {
       proxy: req.body.numproxies,
       message: 'The process is starting...'
     });
-    await runScrapWithProxy(keyword, website, [], numproxies, whatMethod);
+    await PremiumProx(keyword, website, numproxies, country);
   }
 };
 
@@ -110,7 +112,7 @@ const bandwidth = async (req, res) => {
 };
 
 module.exports = {
-  runProxyScrap,
+  runCustomProx,
   runIpScrap,
   getAll,
   getbadresults,

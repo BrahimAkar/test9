@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const router = express.Router();
 const {
-  runProxyScrap,
+  runCustomProx,
   getAll,
   runIpScrap,
   getbadresults,
@@ -18,7 +18,7 @@ const limiter = rateLimit({
 });
 
 // ! Routes limiter,limiter
-router.route('/runproxyscrap').post(runProxyScrap);
+router.route('/runcustomprox').post(runCustomProx);
 router.route('/runipscrap').post(runIpScrap);
 router.route('/getokresults').get(getAll);
 router.route('/getbadresults').get(getbadresults);

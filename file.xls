@@ -1,21 +1,31 @@
 IP	 PORT	Protocol	Country	 Region	 City	 Anonymity	 Speed	 Uptime	 Response	 Last Checked
-159.8.114.34	8123		France			elite proxy				3 seconds ago
-161.202.226.195	8123		Japan			elite proxy				3 seconds ago
-125.167.100.193	80		Indonesia			elite proxy				3 seconds ago
-162.14.18.11	80		United States			anonymous				3 seconds ago
-189.204.242.178	8080		Mexico			elite proxy				3 seconds ago
-169.57.157.148	8123		Brazil			elite proxy				3 seconds ago
-173.192.128.238	25		United States			elite proxy				3 seconds ago
-202.57.35.74	38629		Philippines			elite proxy				3 seconds ago
-180.252.53.91	80		Indonesia			elite proxy				3 seconds ago
-161.202.226.194	8123		Japan			elite proxy				3 seconds ago
-173.212.202.65	80		Germany			elite proxy				3 seconds ago
-169.57.1.85	8123		Mexico			elite proxy				3 seconds ago
-200.106.55.125	80		Peru			elite proxy				3 seconds ago
-102.130.133.102	53281		South Africa			elite proxy				3 seconds ago
-169.57.1.84	8123		Mexico			elite proxy				3 seconds ago
-103.233.158.34	8888		Indonesia			elite proxy				3 seconds ago
-169.57.157.146	8123		Brazil			elite proxy				3 seconds ago
-103.31.227.27	8080		Indonesia			anonymous				3 seconds ago
-101.51.141.46	37858		Thailand			elite proxy				3 seconds ago
-74.59.132.126	49073		Canada			elite proxy				3 seconds ago
+34.202.81.205	3128	HTTPS	 United States	Virginia	Ashburn	Transparent	 6172 kB/s 	39.6%	165 ms 	6 hours ago
+34.195.158.33	8080	HTTP	 United States	Virginia	Ashburn	Transparent	 6172 kB/s 	86.2%	171 ms 	5 hours ago
+167.99.230.151	3128	HTTPS	 United States	New York	New York	Transparent	 6112 kB/s 	 	42 ms 	7 hours ago
+206.189.229.10	8080	HTTP	 United States	New York	Flushing	Anonymous	 5968 kB/s 	100%	84 ms 	4 hours ago
+198.50.177.44	44699	SOCKS4	 Canada	Quebec	Montréal	High anonymity	 5968 kB/s 	53.3%	2 ms 	9 hours ago
+159.89.90.117	3128	HTTPS	 United States	New Jersey	North Bergen	Anonymous	 5857 kB/s 	12.5%	50 ms 	4 hours ago
+161.35.110.112	3128	HTTPS	 United States	New Jersey	Mahwah	Transparent	 5294 kB/s 	 	127 ms 	8 hours ago
+52.179.231.206	80	HTTP	 United States	Virginia	Boydton	Anonymous	 5041 kB/s 	100%	191 ms 	7 hours ago
+45.77.104.244	8080	HTTPS	 United States	New Jersey	Bayonne	Transparent	 4904 kB/s 	34.3%	50 ms 	9 hours ago
+167.99.186.202	3128	HTTP	 Canada	Ontario	Toronto	Anonymous	 4703 kB/s 	 	160 ms 	5 hours ago
+51.81.80.216	8080	HTTPS	 France			Transparent	 4669 kB/s 	12.5%	94 ms 	5 hours ago
+138.197.2.106	30062	SOCKS5	 United States	New Jersey	Clifton	High anonymity	 4231 kB/s 	 	60 ms 	4 hours ago
+207.246.87.231	8080	HTTPS	 United States	New Jersey	Piscataway	Transparent	 3834 kB/s 	34.6%	48 ms 	5 hours ago
+134.122.19.151	3128	HTTPS	 United States	California	Campbell	Transparent	 3534 kB/s 	 	120 ms 	7 hours ago
+161.35.5.51	3128	HTTPS	 United States	New Jersey	Mahwah	Transparent	 3514 kB/s 	75%	50 ms 	6 hours ago
+157.245.95.2	8080	HTTP	 United States	Oregon	Eugene	Anonymous	 3312 kB/s 	 	2946 ms 	5 hours ago
+167.172.152.115	8080	HTTP	 United Kingdom	Hertford	Stevenage	Anonymous	 3261 kB/s 	97.7%	78 ms 	4 hours ago
+168.169.96.14	8080	HTTP	 United States	New York	Wellsville	Transparent	 3203 kB/s 	100%	355 ms 	5 hours ago
+104.247.51.10	8080	HTTP	 United States	New York	Larchmont	Transparent	 3195 kB/s 	100%	208 ms 	4 hours ago
+52.179.18.244	8080	HTTPS	 United States	Virginia	Boydton	Transparent	 3132 kB/s 	86.3%	111 ms 	7 hours ago
+168.169.146.12	8080	HTTP	 United States	New York	Buffalo	Transparent	 3063 kB/s 	85.4%	275 ms 	7 hours ago
+13.85.25.59	8080	HTTP	 United States	Texas	San Antonio	Anonymous	 2915 kB/s 	97.8%	235 ms 	5 hours ago
+155.138.131.165	8080	HTTPS	 United States	Michigan	University Center	Transparent	 2781 kB/s 	25%	128 ms 	8 hours ago
+134.122.26.80	3128	HTTPS	 United States	California	Campbell	Transparent	 2775 kB/s 	44.4%	51 ms 	5 hours ago
+157.55.86.173	8080	HTTP	 United States	Texas	San Antonio	Anonymous	 2721 kB/s 	100%	235 ms 	6 hours ago
+69.162.64.12	5836	HTTPS	 United States	Texas	Dallas	Transparent	 2709 kB/s 	32.6%	256 ms 	9 hours ago
+172.96.189.134	8080	HTTP	 Canada	Ontario	Fergus	Anonymous	 2636 kB/s 	17.2%	232 ms 	6 hours ago
+149.56.1.48	8181	SOCKS4	 Canada	Quebec	Montréal	High anonymity	 2614 kB/s 	78.2%	3 ms 	8 hours ago
+155.138.143.245	8080	HTTPS	 United States	Michigan	University Center	Transparent	 2577 kB/s 	34.3%	38 ms 	8 hours ago
+136.53.58.105	3128	HTTPS	 United States	California	Mountain View	Transparent	 2551 kB/s 	4%	186 ms 	8 hours ago

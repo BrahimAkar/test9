@@ -16,11 +16,11 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-
+const CustomProx = require('./methodes/CustomProx');
+var fullArray = [];
 async function scrapIt(pagesNum) {
   // !
 
-  var fullArray = [];
   try {
     const browser = await puppeteer.launch({
       headless: false
@@ -38,7 +38,6 @@ async function scrapIt(pagesNum) {
       });
       io.emit('process', `Opening Page: ${url}${i + 1}`);
 
-      await page.waitFor(3000);
       io.emit('process', `Waiting for 3 Seconds`);
       await page.waitFor(1000);
       const data = await page.evaluate(
@@ -50,7 +49,7 @@ async function scrapIt(pagesNum) {
         '#proxy_list > tbody tr'
       );
 
-      let Port;
+      let PORT;
       let Protocol;
       let Country;
       let Region;
@@ -63,7 +62,7 @@ async function scrapIt(pagesNum) {
       fullTab.forEach(f => {
         let Encodedproxy = f.firstElementChild.textContent;
         try {
-          Port = f.cells[1].textContent;
+          PORT = f.cells[1].textContent;
           Protocol = f.cells[2].textContent;
           Country = f.cells[3].textContent;
           Region = f.cells[4].textContent;
@@ -74,7 +73,7 @@ async function scrapIt(pagesNum) {
           ResponseTime = f.cells[9].textContent;
           Lastchecked = f.cells[10].textContent;
         } catch (error) {
-          Port = '';
+          PORT = '';
           Protocol = '';
           Country = '';
           Region = '';
@@ -90,8 +89,8 @@ async function scrapIt(pagesNum) {
         var end_pos = Encodedproxy.indexOf('"', start_pos);
         var text_to_get = Encodedproxy.substring(start_pos, end_pos);
         fullArray.push({
-          proxy: Buffer.from(text_to_get, 'base64').toString('ascii'),
-          Port: Port,
+          IP: Buffer.from(text_to_get, 'base64').toString('ascii'),
+          PORT: PORT,
           Protocol: Protocol,
           Country,
           Region,
@@ -104,7 +103,7 @@ async function scrapIt(pagesNum) {
         });
       });
       io.emit('process', `We got it!, Number of proxies: ${fullArray.length}`);
-      await page.waitFor(9000);
+
       io.emit('process', `Wait for 9 Seconds`);
       console.log(`Page ${i + 1} ✅`);
     }
@@ -114,7 +113,7 @@ async function scrapIt(pagesNum) {
   }
 
   let newArray = fullArray.filter(value => JSON.stringify(value) !== '{}');
-  let newArray2 = fullArray.filter(el => el.proxy !== '' && el.Port !== '');
+  let newArray2 = fullArray.filter(el => el.IP !== '' && el.PORT !== '');
   fullArray = [...newArray2];
   console.log(JSON.stringify(fullArray));
   console.log(fullArray.length);
@@ -146,9 +145,9 @@ async function scrapIt(pagesNum) {
   writeStream.write(header);
   for (var i = 0; i < fullArray.length; i++) {
     var row =
-      fullArray[i].proxy +
+      fullArray[i].IP +
       '\t' +
-      fullArray[i].Port +
+      fullArray[i].PORT +
       '\t' +
       fullArray[i].Protocol +
       '\t' +
@@ -176,6 +175,7 @@ async function scrapIt(pagesNum) {
     'process',
     `Process Is Finished!, Proxies Number: ${fullArray.length}`
   );
+  CustomProx('what is my ip', 'jetcost', fullArray);
 }
 
-scrapIt(150);
+scrapIt(1);

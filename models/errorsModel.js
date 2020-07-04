@@ -21,6 +21,15 @@ const errorsSchema = new mongoose.Schema({
   Message: {
     type: String
   },
+  pageTitle: {
+    type: String
+  },
+  PageLink: {
+    type: String
+  },
+  screenPath: {
+    type: String
+  },
   dateTime: {
     type: String
   },
