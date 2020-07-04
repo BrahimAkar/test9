@@ -25,7 +25,8 @@ let page2;
 let page;
 let pageTitle;
 let liveStepCount;
-async function CustomProx(keyword, website, proxiesArray) {
+async function CustomProx(keyword, website, proxiesArray, protocol = ' ') {
+  console.log('PROTOCOL IS : ', protocol);
   let browser;
   let howLong = proxiesArray.length === 0 ? 1 : proxiesArray.length;
 
@@ -36,7 +37,7 @@ async function CustomProx(keyword, website, proxiesArray) {
       scrapObj = [];
 
       browser = await ScrapFunctions.initiateBrowser(
-        `--proxy-server=socks5://${proxiesArray[j].IP}:${proxiesArray[j].PORT}`,
+        `--proxy-server=${protocol}${proxiesArray[j].IP}:${proxiesArray[j].PORT}`,
         'FREE',
         liveStepCount
       );

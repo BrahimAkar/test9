@@ -9,6 +9,7 @@ const runCustomProx = async (req, res) => {
   keyword = req.body.keyword;
   website = req.body.website;
   proxies = req.body.proxies;
+  protocol = req.body.protocol;
   whatMethod = {
     method: 'custom'
   };
@@ -24,7 +25,7 @@ const runCustomProx = async (req, res) => {
       proxy: req.body.proxies,
       message: 'The process is starting...'
     });
-    await CustomProx(keyword, website, req.body.proxies);
+    await CustomProx(keyword, website, req.body.proxies, protocol);
   }
 };
 

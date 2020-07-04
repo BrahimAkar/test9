@@ -26,7 +26,7 @@ async function PremiumProx(keyword, website, numproxies, country = 'Spain') {
     try {
       scrapObj = [];
       browser = await ScrapFunctions.initiateBrowser(
-        `--proxy-server=34.201.233.141:31112`,
+        `--proxy-server=3.231.123.232:31112`,
         'PREMIUM',
         liveStepCount
       );
