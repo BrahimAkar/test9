@@ -19,7 +19,7 @@ var port = process.env.PORT || 3000;
 
 const scrapRouter = require('./routes/scrapRoutes');
 
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
 io.emit('process', `Server is UP 👨‍💻`);
 
 // ! App Middleware

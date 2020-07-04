@@ -99,7 +99,7 @@ async function runScrapWithProxy(
         });
         io.emit('process', `${liveStepCount} ⌛ Browser is launching... 🌐`);
         const page = await browser.newPage();
-
+        page.setUserAgent(userAgent);
         await page.waitFor(2000);
         if (method.method === 'custom') {
           io.emit('process', `Proxy : ...${proxies[i].IP} 🆗`);

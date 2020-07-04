@@ -36,7 +36,7 @@ async function CustomProx(keyword, website, proxiesArray) {
       scrapObj = [];
 
       browser = await ScrapFunctions.initiateBrowser(
-        `--proxy-server=http://${proxiesArray[j].IP}:${proxiesArray[j].PORT}`,
+        `--proxy-server=socks5://${proxiesArray[j].IP}:${proxiesArray[j].PORT}`,
         'FREE',
         liveStepCount
       );
