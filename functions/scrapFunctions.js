@@ -95,7 +95,7 @@ const ScrapFunctions = {
   },
   initiateBrowser: async (proxy, type, liveStepCount) => {
     let browser = await puppeteer.launch({
-      headless: true,
+      headless: false,
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',

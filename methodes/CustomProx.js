@@ -177,38 +177,38 @@ async function CustomProx(keyword, website, proxiesArray, protocol = ' ') {
     } catch (err) {
       var randomnumber2 = uuidv1();
       let picturePath2;
-      await page.screenshot({
-        path: `./pictures/ERROR${randomnumber2}.png`
-      });
+      // await page.screenshot({
+      //   path: `./pictures/ERROR${randomnumber2}.png`
+      // });
       let errorMessage = err.message || err;
-      const CurrentPageTitle = await page.title();
-      const CurrentPageLink = await page.url();
-      await cloudinary.uploader
-        .upload(`./pictures/ERROR${randomnumber2}.png`, {
-          transformation: [{ width: 640, height: 400 }]
-        })
-        .then(res => {
-          picturePath2 = res.url;
-          io.emit(
-            'process',
-            `${liveStepCount} ⌛ Screenshot uploaded to cloudinary with success 📶`
-          );
-          scrapObj.push(
-            ScrapFunctions.getTheObject(
-              false,
-              errorMessage,
-              CurrentPageTitle,
-              CurrentPageLink,
-              picturePath2,
-              ScrapFunctions.fullDate(),
-              proxiesArray[j].IP
-            )
-          );
-        });
+      // const CurrentPageTitle = await page.title();
+      // const CurrentPageLink = await page.url();
+      // await cloudinary.uploader
+      //   .upload(`./pictures/ERROR${randomnumber2}.png`, {
+      //     transformation: [{ width: 640, height: 400 }]
+      //   })
+      //   .then(res => {
+      //     picturePath2 = res.url;
+      //     io.emit(
+      //       'process',
+      //       `${liveStepCount} ⌛ Screenshot uploaded to cloudinary with success 📶`
+      //     );
+      //     scrapObj.push(
+      //       ScrapFunctions.getTheObject(
+      //         false,
+      //         errorMessage,
+      //         CurrentPageTitle,
+      //         CurrentPageLink,
+      //         picturePath2,
+      //         ScrapFunctions.fullDate(),
+      //         proxiesArray[j].IP
+      //       )
+      //     );
+      //   });
 
       io.emit('process', `❌ ERROR ❌ : ${errorMessage} `);
       console.log('Error: ', errorMessage);
-      await errorsMod.create(scrapObj);
+      // await errorsMod.create(scrapObj);
       scrapObj = [];
 
       await browser.close();
