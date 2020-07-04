@@ -98,12 +98,17 @@ async function PremiumProx(keyword, website, numproxies, country = 'Spain') {
           website +
           "')]"
       );
+      const captcha = await page.$x(`//*[@id="recaptcha"]`);
+
+      if (captcha.length !== 0) {
+        throw 'Captcha detected';
+      }
       if (elements.length === 0) {
         io.emit(
           'process',
           `${liveStepCount} ⌛ Proxy dead or no website at first google page!`
         );
-        throw 'Proxy Dead/ or no websites at first google page!';
+        throw 'No ads found for this keyword';
       }
 
       await page.waitFor(9000);
