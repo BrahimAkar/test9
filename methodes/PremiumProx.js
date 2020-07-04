@@ -26,7 +26,7 @@ async function PremiumProx(keyword, website, numproxies, country = 'Spain') {
     try {
       scrapObj = [];
       browser = await ScrapFunctions.initiateBrowser(
-        `--proxy-server=3.231.123.232:31112`,
+        `--proxy-server=proxy.proxy-cheap.com:31112`,
         'PREMIUM',
         liveStepCount
       );
@@ -104,10 +104,7 @@ async function PremiumProx(keyword, website, numproxies, country = 'Spain') {
         throw 'Captcha detected';
       }
       if (elements.length === 0) {
-        io.emit(
-          'process',
-          `${liveStepCount} ⌛ Proxy dead or no website at first google page!`
-        );
+        io.emit('process', `${liveStepCount} ⌛ No ads found for this keyword`);
         throw 'No ads found for this keyword';
       }
 
