@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "check-proxy": "^0.3.3",
     "cloudinary": "^1.22.0",
     "cors": "^2.8.5",
